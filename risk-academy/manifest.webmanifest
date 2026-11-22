@@ -1,0 +1,21 @@
+{
+  "name": "The Risk Academy",
+  "short_name": "Risk Academy",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f3ec",
+  "theme_color": "#5b1832",
+  "description": "Strategic Risk Leadership and Advisory learning programme",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

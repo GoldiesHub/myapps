@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#5b1832">
+<title>The Risk Academy</title>
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root{--wine:#5b1832;--gold:#c6a15b;--cream:#f7f3ec;--ink:#25232a;--muted:#706b70;--line:#e8e0d7}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+header{background:var(--wine);color:white;padding:26px 20px 22px}header small{color:#ead9c0;letter-spacing:.12em;text-transform:uppercase;font-size:11px}h1{font-size:27px;margin:7px 0 3px}header p{margin:0;color:#f1e8e8;font-size:14px}
+nav{display:flex;overflow:auto;gap:8px;padding:12px;background:white;position:sticky;top:0;border-bottom:1px solid var(--line);z-index:2}
+nav button{border:1px solid var(--line);background:white;border-radius:20px;padding:9px 14px;white-space:nowrap;color:var(--ink);font-weight:600}
+nav button.active{background:var(--wine);color:white;border-color:var(--wine)}
+main{max-width:850px;margin:auto;padding:18px 16px 50px}.panel{display:none}.panel.active{display:block}
+.card{background:white;border:1px solid var(--line);border-radius:15px;padding:17px;margin:12px 0;box-shadow:0 2px 8px #3b24300a}
+h2{font-size:21px;margin:4px 0 10px;color:var(--wine)}h3{font-size:16px;margin:0 0 7px}
+.kicker{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+p{margin:7px 0}ul{padding-left:21px;margin:8px 0}li{margin:5px 0}
+.progress{height:9px;background:#eee7df;border-radius:10px;overflow:hidden}.progress span{display:block;height:100%;background:var(--gold);width:0}
+button.action{background:var(--wine);color:white;border:0;border-radius:9px;padding:10px 14px;font-weight:650;margin:5px 5px 5px 0}
+button.secondary{background:white;color:var(--wine);border:1px solid var(--wine);border-radius:9px;padding:9px 12px;font-weight:600}
+input,textarea,select{width:100%;padding:11px;border:1px solid var(--line);border-radius:9px;font:inherit;margin:5px 0 12px;background:#fff}
+textarea{min-height:115px}label{font-weight:650;font-size:14px}
+.check{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid #f0ece7}.check input{width:auto;margin:5px 0}
+.tag{display:inline-block;background:#f2e8eb;color:var(--wine);padding:4px 9px;border-radius:20px;font-size:12px;font-weight:700}
+a{color:var(--wine)}.muted{color:var(--muted);font-size:14px}
+.module{border-left:4px solid var(--gold);padding-left:12px;margin:14px 0}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:20px}
+</style>
+</head>
+<body>
+<header><small>Think strategically · Anticipate uncertainty · Advise with authority</small><h1>The Risk Academy</h1><p>Strategic Risk Leadership &amp; Advisory | A six-month learning programme</p></header>
+<nav id="tabs">
+<button class="active" data-tab="home">Dashboard</button><button data-tab="curriculum">Curriculum</button><button data-tab="classroom">Classroom</button><button data-tab="portfolio">Portfolio</button><button data-tab="library">Library</button><button data-tab="progress">Progress</button>
+</nav>
+<main>
+<section id="home" class="panel active">
+<div class="card"><div class="kicker">Your destination</div><h2>Board Risk Adviser / Independent Consultant</h2><p>Build the judgement, business understanding and advisory authority to help leaders and Boards make better decisions under uncertainty.</p><div class="progress"><span id="overallBar"></span></div><p class="muted" id="overallText">0 of 24 weekly milestones completed</p></div>
+<div class="card"><div class="kicker">Current focus · Module 1, Week 1</div><h2>Understand the business before assessing its risks</h2><p>Central question: How does an organisation create value, what makes its business model successful, and what assumptions must hold true for that success to continue?</p><button class="action" onclick="showTab('classroom')">Enter classroom</button></div>
+<div class="card"><h3>Your learning rhythm</h3><ul><li>Learn concepts and frameworks.</li><li>Study research and institutional literature.</li><li>Examine real organisations and decisions.</li><li>Apply concepts to practical problems.</li><li>Defend your conclusions.</li></ul><p class="muted">Suggested commitment: 6–8 hours per week.</p></div>
+</section>
+<section id="curriculum" class="panel"><div class="card"><div class="kicker">24 weeks · 6 modules</div><h2>Programme curriculum</h2><div id="modules"></div></div></section>
+<section id="classroom" class="panel">
+<div class="card"><div class="kicker">Module 1 · Week 1 · Lesson 1</div><h2>Understanding Strategy: How Organisations Choose to Win</h2>
+<p><b>Learning purpose:</b> Develop a disciplined understanding of strategy as a set of choices about where and how an organisation will compete, create value and sustain advantage.</p>
+<h3>1. What strategy is</h3><p>Strategy is not a slogan, a vision statement or a long list of activities. It is an integrated set of choices that responds to a significant challenge and establishes a coherent path to success.</p><p>Richard Rumelt describes good strategy through three connected elements: a diagnosis of the challenge, a guiding policy for addressing it, and coherent actions that reinforce one another.</p>
+<h3>2. Strategy versus related concepts</h3><ul><li><b>Vision:</b> the future an organisation aspires to create.</li><li><b>Mission:</b> its fundamental purpose and reason for existing.</li><li><b>Objectives:</b> the outcomes it intends to achieve.</li><li><b>Plans:</b> the activities, resources and timelines used to execute.</li><li><b>Strategy:</b> the choices and logic connecting the organisation's position to its desired outcomes.</li></ul>
+<h3>3. Choice, focus and trade-offs</h3><p>A strategy requires choices. An organisation cannot serve every customer, pursue every opportunity or be excellent at everything. Competitive positioning involves deciding what to do, what not to do, and how activities reinforce the chosen position.</p>
+<h3>4. Competitive advantage</h3><p>Advantage may arise from cost, differentiation, access, trust, network effects, proprietary capabilities, scale, distribution or regulatory permissions. The strategic question is whether the advantage is valuable, difficult to imitate and likely to endure.</p>
+<h3>5. Why strategies fail</h3><ul><li>The diagnosis misunderstands the real challenge.</li><li>Ambitions are mistaken for choices.</li><li>Initiatives are disconnected and compete for resources.</li><li>Critical assumptions are not tested.</li><li>External changes invalidate the business model.</li><li>Execution capabilities are weaker than the strategy requires.</li></ul>
+<h3>6. The risk leader's lens</h3><p>Before identifying risks, understand what the organisation is trying to achieve and what must be true for its strategy to work. Ask: What assumptions underpin growth? Which customers, markets, partners, technologies or regulatory conditions are essential? What could make the economics stop working?</p>
+<h3>Reflection exercise</h3><p>Choose a familiar organisation. In no more than 250 words, explain its strategic choice, how it creates an advantage, and one assumption that could invalidate that advantage.</p>
+<h3>Recommended study</h3><ul><li>Richard Rumelt, <i>Good Strategy/Bad Strategy</i>, Chapters 1–5.</li><li>Michael Porter, “What Is Strategy?”, Harvard Business Review, 1996.</li><li>Explore the organisation's annual report and strategy statement.</li></ul>
+</div>
+<div class="card"><h2>Week 1 learning checklist</h2><div id="weekChecks"></div></div>
+<div class="card"><h2>Week 1 knowledge check</h2><div id="quiz"></div><button class="action" onclick="gradeQuiz()">Check answers</button><p id="quizResult" class="muted"></p></div>
+</section>
+<section id="portfolio" class="panel"><div class="card"><h2>Professional portfolio</h2><p class="muted">Build evidence of your ability to analyse, challenge and advise.</p><div id="projects"></div></div><div class="card"><h3>Week 1 working notes</h3><label for="notes">Organisation, business model, strategic choices, assumptions and vulnerabilities</label><textarea id="notes" placeholder="Capture your analysis here..."></textarea><button class="action" onclick="saveNotes()">Save notes</button><span id="saved" class="muted"></span></div></section>
+<section id="library" class="panel"><div class="card"><h2>Core learning library</h2><ul>
+<li><a href="https://www.goodreads.com/book/show/11721966-good-strategy-bad-strategy" target="_blank" rel="noopener">Good Strategy/Bad Strategy · Richard Rumelt</a></li>
+<li><a href="https://hbr.org/1996/11/what-is-strategy" target="_blank" rel="noopener">What Is Strategy? · Michael Porter</a></li>
+<li><a href="https://www.strategyzer.com/library/the-business-model-canvas" target="_blank" rel="noopener">Business Model Canvas · Strategyzer</a></li>
+<li><a href="https://www.coso.org/enterprise-risk-management" target="_blank" rel="noopener">COSO Enterprise Risk Management</a></li>
+<li><a href="https://www.iso.org/iso-31000-risk-management.html" target="_blank" rel="noopener">ISO 31000 Risk Management</a></li>
+<li><a href="https://www.oecd.org/corporate/" target="_blank" rel="noopener">OECD Corporate Governance</a></li>
+<li><a href="https://ocw.mit.edu/" target="_blank" rel="noopener">MIT OpenCourseWare</a></li>
+</ul><p class="muted">Some resources may require purchase, registration or institutional access.</p></div></section>
+<section id="progress" class="panel"><div class="card"><h2>Learning progress</h2><p id="progressCount"></p><div class="progress"><span id="progressBar"></span></div><p class="muted">Progress is saved on this device. Export a backup before changing devices or clearing browser data.</p><button class="action" onclick="exportData()">Export backup</button><label for="importFile">Restore backup</label><input id="importFile" type="file" accept="application/json" onchange="importData(event)"></div></section>
+</main><footer>The Risk Academy · Personal professional development programme · Not an accredited qualification</footer>
+<script>
+const modules=[
+["Strategy, Business Models & Value Creation",["Understanding strategy","Business models and value creation","Competitive positioning","Strategic risk and vulnerabilities"]],
+["Enterprise Risk Leadership & Governance",["ERM philosophy and frameworks","Risk appetite and tolerance","Risk culture and accountability","Integrating risk into strategy"]],
+["Board Governance & Strategic Oversight",["Corporate governance","Board risk oversight","Executive accountability","Board reporting and assurance"]],
+["Strategic Foresight & Decision Intelligence",["Horizon scanning","Scenario planning","Decision-making under uncertainty","Systemic and interconnected risks"]],
+["Organisational Resilience & Transformation",["Organisational resilience","Crisis management","Transformation risk","Technology and emerging risks"]],
+["Risk Advisory & Executive Influence",["Risk diagnostics","Business and financial intelligence","Executive communication","Independent advisory practice"]]
+];
+const projects=["Strategic business analysis","ERM maturity and governance diagnostic","Board risk oversight effectiveness assessment","Strategic scenario analysis and executive briefing","Organisational resilience and crisis simulation","Independent Board advisory report and presentation"];
+let state=JSON.parse(localStorage.getItem("ra_state")||'{"checks":{},"projects":{},"notes":""}');
+function persist(){localStorage.setItem("ra_state",JSON.stringify(state));renderProgress()}
+function showTab(id){document.querySelectorAll(".panel").forEach(x=>x.classList.toggle("active",x.id===id));document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("active",x.dataset.tab===id));window.scrollTo(0,0)}
+document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>showTab(b.dataset.tab)));
+function renderModules(){document.getElementById("modules").innerHTML=modules.map((m,i)=>`<div class="module"><span class="tag">Module ${i+1} · Weeks ${i*4+1}–${i*4+4}</span><h3>${m[0]}</h3><ol>${m[1].map(x=>`<li>${x}</li>`).join("")}</ol></div>`).join("")}
+const checks=["Understand the distinction between strategy, vision, mission, objectives and plans","Read the assigned sections of Good Strategy/Bad Strategy","Study the Business Model Canvas","Analyse one organisation's business model and competitive position","Identify five strategic assumptions","Identify five initial strategic vulnerabilities","Draft the 3–5 page strategic business analysis"];
+function renderChecks(){document.getElementById("weekChecks").innerHTML=checks.map((c,i)=>`<label class="check"><input type="checkbox" ${state.checks[i]?"checked":""} onchange="state.checks[${i}]=this.checked;persist()"><span>${c}</span></label>`).join("")}
+function renderProjects(){document.getElementById("projects").innerHTML=projects.map((p,i)=>`<label class="check"><input type="checkbox" ${state.projects[i]?"checked":""} onchange="state.projects[${i}]=this.checked;persist()"><span>${p}</span></label>`).join("")}
+function renderProgress(){let n=Object.values(state.checks).filter(Boolean).length;let pct=Math.round(n/24*100);document.getElementById("progressCount").textContent=n+" of 24 weekly learning milestones completed ("+pct+"% of the 24-item tracker).";document.getElementById("progressBar").style.width=pct+"%";document.getElementById("overallBar").style.width=pct+"%";document.getElementById("overallText").textContent=n+" of 24 tracked learning milestones completed"}
+function saveNotes(){state.notes=document.getElementById("notes").value;persist();document.getElementById("saved").textContent=" Saved on this device."}
+function exportData(){let blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="risk-academy-backup.json";a.click();URL.revokeObjectURL(a.href)}
+function importData(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{state=JSON.parse(r.result);persist();renderChecks();renderProjects();document.getElementById("notes").value=state.notes||"";alert("Backup restored.")}catch{alert("This backup file could not be read.")}};r.readAsText(f)}
+const questions=[["A strategy is best understood as:",["A list of annual activities","A coherent set of choices for addressing a challenge and creating advantage","A vision statement","A financial forecast"],1],["Which is most clearly a strategic assumption?",["Staff submit timesheets on time","The organisation assumes demand in a target market will continue growing","A monthly report is late","A meeting is postponed"],1],["Why should a risk adviser understand the business model first?",["To produce a longer risk register","To identify what creates value and what could undermine it","To avoid speaking with management","To focus only on compliance"],1],["A genuine competitive strategy requires:",["Pursuing every market opportunity","Avoiding all change","Choices, focus and trade-offs","Only setting ambitious targets"],2]];
+function renderQuiz(){document.getElementById("quiz").innerHTML=questions.map((q,i)=>`<div class="card"><b>${i+1}. ${q[0]}</b>${q[1].map((a,j)=>`<label class="check"><input type="radio" name="q${i}" value="${j}"><span>${a}</span></label>`).join("")}</div>`).join("")}
+function gradeQuiz(){let score=0,answered=0;questions.forEach((q,i)=>{let a=document.querySelector('input[name="q'+i+'"]:checked');if(a){answered++;if(+a.value===q[2])score++}});document.getElementById("quizResult").textContent=answered<4?"You answered "+answered+" of 4. Complete all questions to see your score.":"Your score: "+score+"/4."}
+renderModules();renderChecks();renderProjects();renderQuiz();document.getElementById("notes").value=state.notes||"";renderProgress();
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))navigator.serviceWorker.register("./sw.js").catch(()=>{});
+</script></body></html>
